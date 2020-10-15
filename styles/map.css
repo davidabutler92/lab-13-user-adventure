@@ -1,15 +1,32 @@
 body {
-    background-image: url("https://wow.gamepressure.com/gfx/big_maps/map_of_northrend.jpg");
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: url("https://www.99images.com/photos/wallpapers/dreamy-fantasy/game-of-thrones-mapandroid-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-rhgri.jpg?v=1584175206");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    height: 900px;
+    height: 1200px;
 }
 
-header {
-    font-size: 3em;
-    font-weight: 900;
-    color: rgb(255, 255, 255);
+img {
+  
+  }
+h1 {
+    font-family: 'Piedra', cursive;
+    font-size: 7em !important;
     display: flex;
     justify-content: center;
+}
+
+li {
+    background-color: rgb(65, 64, 64);
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+    outline: none;
+    font-size: 2em;
+    font-family: 'Piedra', cursive;
+}
+
+a {
+    color: rgb(226, 68, 68);
 }

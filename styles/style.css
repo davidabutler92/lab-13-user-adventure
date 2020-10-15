@@ -67,9 +67,9 @@ section {
     margin-bottom: var(--gutter);
 }
 
-header {    
+header {   
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     height: var(--header-height);
 }
 

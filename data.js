@@ -3,8 +3,8 @@ export default [
         id: 'monsters',
         title: 'A Den of Monsters',
         map: {
-            top: '89%',
-            left: '44%'
+            top: '70%',
+            left: '70%'
         },
         image: 'monsters.jpg',
         description: `
@@ -44,8 +44,8 @@ export default [
         }]
     },
     {
-        id: 'dragon',
-        title: 'A Scary Dragon',
+        id: 'ragnaros',
+        title: 'Raid boss: Ragnaros',
         map: {
             top: '17%',
             left: '37%'
@@ -101,8 +101,8 @@ export default [
         id: 'treasure',
         title: 'A Golden Treasure',
         map: {
-            top: '31%',
-            left: '5%'
+            top: '55%',
+            left: '30%'
         },
         prerequisites: ['dragon', 'monsters'],
         image: 'treasure-chests.png',
