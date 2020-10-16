@@ -1,10 +1,11 @@
 import quests from '../data.js';
-import { findById } from '../helper-functions.js';
+import { findById, getUserLocalStorage, setUserLocalStorage, getRadioValue } from '../helper-functions.js';
 
 const section = document.querySelector('section');
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
 const quest = findById(quests, id);
+// const checked = document.querySelector('checked');
 
 
 const h1 = document.createElement('h1');
@@ -24,6 +25,10 @@ section.append(description);
 const form = document.createElement('form');
 section.append(form);
 
+const choiceDescription = document.createElement('div');
+const choiceP = document.createElement('p');
+
+
 
 quest.choices.forEach(choice => {
     const label = document.createElement('label');
@@ -33,7 +38,7 @@ quest.choices.forEach(choice => {
     
     const radio = document.createElement('input');
     radio.type = 'radio';
-    radio.value = 'choice.id';
+    radio.value = choice.id;
     radio.name = 'choices';
     
     label.append(span, radio);
@@ -41,3 +46,25 @@ quest.choices.forEach(choice => {
 });
 
 
+const button = document.createElement('button');
+button.textContent = 'Proceed';
+button.type = 'submit';
+form.append(button);
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const character = getUserLocalStorage();
+
+    const choiceId = getRadioValue(form);
+    const choiceObject = findById(quest.choices, choiceId);
+    console.log(choiceObject);
+    
+    character.hp += choiceObject.hp;
+    character.gold += choiceObject.gold;
+
+    setUserLocalStorage(character);
+
+
+
+});

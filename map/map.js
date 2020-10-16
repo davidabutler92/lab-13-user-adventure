@@ -16,3 +16,4 @@ quests.forEach(quest => {
     link.href = `/quest/?id=${quest.id}`;
     ul.append(li);
 });
+

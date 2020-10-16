@@ -64,37 +64,27 @@ export default [
             id: 'run',
             description: 'Give up (so weak) ',
             result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            You run like a coward, missing the full might of Ragnaros's blast but dealing 35 fire damage to hp.
+            You recieve no gold! lol. Next time don't run bro...
         `,
             hp: -35,
-            gold: 35
+            gold: 0
         }, {
             id: 'fight',
-            description: 'Fight ',
+            description: 'You cast Smite on Ragnaros, dealing holy fire damage! ',
             result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            You attack on Ragnaros was abosorb (because...fire damage). In return, you take 45 fire damage and gain no gold!
         `,
             hp: -45,
             gold: 0
         }, {
             id: 'heal',
-            description: 'Emulate that guy from LOR who shot an arrow',
+            description: 'You thow up a Holy Word: Shield! ',
             result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            You throw up a shield and protect yourself from Ragnaros, also healing you for 50 hp!
+            The raid boss gives up and drops 90 gold!
         `,
-            hp: 0,
+            hp: 50,
             gold: 90
         }]
     },
