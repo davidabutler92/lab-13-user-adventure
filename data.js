@@ -50,18 +50,19 @@ export default [
             top: '17%',
             left: '37%'
         },
-        image: 'dragon.jpg',
-        audio: 'dragon.wav',
+        image: '../assets/ragnaros.jpg',
+        audio: 'bossfight.mp3',
         action: 'dragon-growl.aiff',
         description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        This is the "ranged" mechanic of the fight, Ragnaros will 
+        target a random enemy player with mana and blast them for 
+        a significant amount of fire damage. ... After 3 minutes of 
+        combat, Ragnaros will submerge and summon several Son of Flame 
+        enemies to swarm and attack your raid. What do you do?
     `,
         choices: [{
             id: 'run',
-            description: 'Get the hell out of the village',
+            description: 'Give up (so weak) ',
             result: `
             You high tail it in the opposite direction. Luckily,
             in the panic you find a bag on the ground with 15 gold.
@@ -72,7 +73,7 @@ export default [
             gold: 35
         }, {
             id: 'fight',
-            description: 'Fiiiiiggghhhttt!',
+            description: 'Fight ',
             result: `
             You attempt to charge towards the dragon, who sees you approach
             and let's loose a fireball. You wake up the next morning and the
@@ -82,7 +83,7 @@ export default [
             hp: -45,
             gold: 0
         }, {
-            id: 'archer',
+            id: 'heal',
             description: 'Emulate that guy from LOR who shot an arrow',
             result: `
             Inspired by the legend of Bard the Bowman, you notice a
