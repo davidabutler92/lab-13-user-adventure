@@ -28,6 +28,23 @@ body {
     background-color: var(--color2);
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 4em;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin: 20px;
+    text-align: center;
+    
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -37,7 +54,7 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    display: none;
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -48,15 +65,12 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
 }
 
-header {
+header {   
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    justify-content: center;
     height: var(--header-height);
-    box-shadow: var(--shadow);
 }
 
 footer {

@@ -1,0 +1,18 @@
+h2 {
+    font-family: 'Piedra', cursive;
+    font-size: 7em !important;
+    display: flex;
+    justify-content: center;
+}
+
+em {
+    color: rgb(240, 240, 54);
+}
+
+h1 {
+    font-family: 'Piedra', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
