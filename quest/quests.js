@@ -1,17 +1,11 @@
 import quests from '../data.js';
-import { createRadioChoice, completedQuest } from './quest-helper-functions.js';
-import { findById, getUserLocalStorage, setUserLocalStorage} from '../helper-functions.js';
+import { findById, getUserLocalStorage, setUserLocalStorage, getRadioValue } from '../helper-functions.js';
 
-getUserLocalStorage();
-
+const section = document.querySelector('section');
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
 const quest = findById(quests, id);
-
-if (!quest) {
-    document.location = '../map/index.html';
-}
-
+// const checked = document.querySelector('checked');
 
 
 const h1 = document.createElement('h1');
@@ -32,7 +26,20 @@ const form = document.createElement('form');
 section.append(form);
 
 
-
+quest.choices.forEach(choice => {
+    const label = document.createElement('label');
+    const span = document.createElement('span');
+    
+    span.textContent = choice.description;
+    
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.value = choice.id;
+    radio.name = 'choices';
+    
+    label.append(span, radio);
+    form.append(label);
+});
 
 
 const button = document.createElement('button');
@@ -42,12 +49,16 @@ form.append(button);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const character = getUserLocalStorage();
 
-    character.hp += checked.hp;
-    character.hp += quest.choices.gold;
+    const choiceId = getRadioValue(form);
+    const choiceObject = findById(quest.choices, choiceId);
+    console.log(choiceObject);
+    
+    character.hp += choiceObject.hp;
+    character.gold += choiceObject.gold;
 
     setUserLocalStorage(character);
-
+    
 });
