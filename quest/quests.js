@@ -25,6 +25,10 @@ section.append(description);
 const form = document.createElement('form');
 section.append(form);
 
+const choiceDescription = document.createElement('div');
+const choiceP = document.createElement('p');
+
+
 
 quest.choices.forEach(choice => {
     const label = document.createElement('label');
@@ -60,5 +64,7 @@ form.addEventListener('submit', (e) => {
     character.gold += choiceObject.gold;
 
     setUserLocalStorage(character);
-    
+
+
+
 });
