@@ -84,7 +84,7 @@ export default [
             gold: 0
         }, {
             id: 'heal',
-            description: 'Emulate that guy from LOR who shot an arrow',
+            description: 'You thow up a Holy Word: Shield!',
             result: `
             Inspired by the legend of Bard the Bowman, you notice a
             stunned archer standing nearby and take their bow and quiver,
